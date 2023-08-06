@@ -1,8 +1,8 @@
 # Chat Ai - Ask Anything
-ChatAi= type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/ChatAiAsk.js
+ChatAi= type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/ChatAiAsk.js
 
 # 网速管家
-wsgj= type=http-response,requires-body=1,max-size=0,pattern=^https:\/\/api-v3\.speedtest\.cn\/user\/info,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/wsgj.js
+wsgj= type=http-response,pattern=^https:\/\/api-v3\.speedtest\.cn\/user\/info,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/wsgj.js
 
 # 问真八字
-wzbz= type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/bzpp2\.iwzbz\.com\/api\/.*\/user\/getvipinfo,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/wzbz.js
+wzbz= type=http-response,pattern=^https?:\/\/bzpp2\.iwzbz\.com\/api\/.*\/user\/getvipinfo,type=http-response,pattern=https://raw.githubusercontent.com/wuai19/rewrite/main/wzbz.js
