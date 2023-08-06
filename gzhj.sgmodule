@@ -19,6 +19,9 @@ wzbz= type=http-response,pattern=^https?:\/\/bzpp2\.iwzbz\.com\/api\/.*\/user\/g
 # TouchRetouch
 TouchRetouch= type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/TouchRetouch.js
 
+# 彩云天气
+caiyun= type=http-response,pattern=^https?:\/\/(biz|wrapper)\.cyapi\.cn\/(.+\/(user.+|visitors|activity)|p\/v\d\/vip_info),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/caiyun.js
+
 #**************************************#
 [MITM]
-hostname = %APPEND% api*.speedtest.cn, buy.itunes.apple.com, bzpp2.iwzbz.com, api.revenuecat.com
+hostname = %APPEND% api*.speedtest.cn, buy.itunes.apple.com, bzpp2.iwzbz.com, api.revenuecat.com, *.cyapi.cn, adx.sogaha.cn
