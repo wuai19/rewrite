@@ -8,7 +8,7 @@
 
 [rewrite_local]
 
-^https:\/\/api-v3\.speedtest\.cn\/user\/info url script-response-body https://raw.githubusercontent.com/wuai19/wsgj/main/wsgj.js
+^https:\/\/api-v3\.speedtest\.cn\/user\/info url script-response-body https://raw.githubusercontent.com/wuai19/rewrite/main/wsgj.js
 
 [mitm]
 
