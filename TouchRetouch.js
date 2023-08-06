@@ -12,8 +12,7 @@ TG频道群：https://t.me/Guding88
 **************************************
 
 [rewrite_local]
-^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-response-body https://raw.githubusercontent.com/wuai19/TouchRetouch/main/TouchRetouch.js
-^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) url script-request-header https://raw.githubusercontent.com/wuai19/TouchRetouch/main/TouchRetouch.js
+^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$ url script-response-body https://raw.githubusercontent.com/wuai19/rewrite/main/TouchRetouch.js
 
 [MITM]
 hostname = api.revenuecat.com
