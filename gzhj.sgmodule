@@ -28,4 +28,4 @@ Spotify-proto= type=http-response,pattern=^https?:\/\/spclient\.wg\.spotify\.com
 
 #**************************************#
 [MITM]
-hostname = %APPEND% api*.speedtest.cn, buy.itunes.apple.com, bzpp2.iwzbz.com, api.revenuecat.com, *.cyapi.cn, adx.sogaha.cn
+hostname = %APPEND% api*.speedtest.cn, buy.itunes.apple.com, bzpp2.iwzbz.com, api.revenuecat.com, *.cyapi.cn, adx.sogaha.cn, spclient.wg.spotify.com
