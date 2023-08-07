@@ -4,8 +4,7 @@
 
 [rewrite_local]
 
-^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) url script-echo-response 
-
+^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) url script-echo-response https://github.com/wuai19/rewrite/blob/main/Emby.js
 [mitm]
 
 hostname= mb3admin.com
