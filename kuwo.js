@@ -1,3 +1,13 @@
+[rewrite_local]
+
+^https?:\/\/.*\.(kuwo|lrts)\.(cn|me)\/(a\.p|music\.pay|(vip\/(v2|enc)\/(theme|user\/vip))|(EcomResource|(Mobile)?Ad)Serv(er|ice)).* url script-response-body https://raw.githubusercontent.com/wuai19/rewrite/main/kuwo.js
+
+[mitm] 
+
+hostname = *.kuwo.cn, *.lrts.me
+
+********************************/
+
 var body = $response.body;
 var url = $request.url;
 var obj = JSON.parse(body);
