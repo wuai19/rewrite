@@ -1,4 +1,3 @@
-'use strict';
 /** @type {function(number, ?): ?} */
 var _0x45d9ec = _0xccbd;
 (function(saveNotifs, y) {
