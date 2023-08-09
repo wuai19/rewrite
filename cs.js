@@ -1,0 +1,1 @@
+type=http-response,pattern=^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/ChatAiAsk.js
