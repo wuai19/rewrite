@@ -1,0 +1,17 @@
+#代理更新 
+
+https://t.me/proxy?server=13.40.45.117&port=39612&secret=eef88aa573bf8f15cc3ee59fc1d05f1a957777772e62616964752e636f6d
+
+https://t.me/proxy?server=159.69.216.191&port=443&secret=eef53b0d46cf27c43a40e9923c26c8d04873332e616d617a6f6e6177732e636f6d
+
+https://t.me/proxy?server=139.162.46.28&port=63210&secret=ee46d305134450266b9d4db20f897b6141617a7572652e6d6963726f736f66742e636f6d
+
+https://t.me/proxy?server=5.206.229.9&port=3443&secret=ee1603010200010001fc030386e24c3add76616e2e6e616a76612e636f6d
+
+https://t.me/proxy?server=8.219.231.106&port=1888&secret=7mwGU5lUQfW3EL8F3QeWWHpjZi5xcS5jb20
+
+tg://proxy?server=120.233.42.64&port=27132&secret=eee81805bc5e741c412514f38c774771717777772e636c6f7564666c6172652e636f6d
+
+https://t.me/proxy?server=128.140.0.174&port=443&secret=ee23ed123e1efe65dc183c9b889369567273332e616d617a6f6e6177732e636f6d
+
+来源网络，侵权告删
