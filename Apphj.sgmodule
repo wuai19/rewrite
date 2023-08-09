@@ -28,20 +28,6 @@ Spotify-proto= type=http-response,pattern=^https?:\/\/spclient\.wg\.spotify\.com
 # 拦截100
 Block100= type=http-response,pattern=^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/Block100SVIPCrack.js
 
-# YouTube
-# ======= 视频广告请求 ======= #
-(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) url 302 $1$2$3
-^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad url reject-200
-
-# ======= 视频PIP|后台播放|瀑布流|搜索页|播放页|短视频|贴片广告  ======= #
-YouTubepip= type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/Youtube.request.beta.js
-YouTubepip= type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/Youtube.response.beta.js
-
-# ======= 通用广告请求 ======= #
-^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads url reject-200
-^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) url reject-200
-^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext url reject-200
-
 #**************************************#
 [MITM]
-hostname = %APPEND% api*.speedtest.cn, buy.itunes.apple.com, bzpp2.iwzbz.com, api.revenuecat.com, *.cyapi.cn, adx.sogaha.cn, spclient.wg.spotify.com, tagit.hyhuo.com, redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com
+hostname = %APPEND% api*.speedtest.cn, buy.itunes.apple.com, bzpp2.iwzbz.com, api.revenuecat.com, *.cyapi.cn, adx.sogaha.cn, spclient.wg.spotify.com, tagit.hyhuo.com
