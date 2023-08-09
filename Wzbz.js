@@ -16,7 +16,7 @@
 [rewrite_local]
   
 # > 问真八字☆解锁钻石会员权限（2023-08-04）@ddgksf2013
-^https?:\/\/bzpp2\.iwzbz\.com\/api\/.*\/user\/getvipinfo url script-response-body https://github.com/wuai19/rewrite/blob/main/wzbz.js
+^https?:\/\/bzpp2\.iwzbz\.com\/api\/.*\/user\/getvipinfo url script-response-body https://github.com/wuai19/rewrite/blob/main/Wzbz.js
 
 
 [mitm] 
