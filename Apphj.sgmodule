@@ -26,6 +26,8 @@ caiyun= type=http-response,pattern=^https?:\/\/(biz|wrapper)\.cyapi\.cn\/(.+\/(u
 Spotify-json= type=http-request,pattern=^https?:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/Spotify-json.js
 Spotify-proto= type=http-response,pattern=^https?:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/Spotify-proto.js,script-update-interval=0
 
+# 拦截100
+Block100= type=http-response,pattern=^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/Block100SVIPCrack.js
 #**************************************#
 [MITM]
-hostname = %APPEND% api*.speedtest.cn, buy.itunes.apple.com, bzpp2.iwzbz.com, api.revenuecat.com, *.cyapi.cn, adx.sogaha.cn, spclient.wg.spotify.com
+hostname = %APPEND% api*.speedtest.cn, buy.itunes.apple.com, bzpp2.iwzbz.com, api.revenuecat.com, *.cyapi.cn, adx.sogaha.cn, spclient.wg.spotify.com, tagit.hyhuo.com
