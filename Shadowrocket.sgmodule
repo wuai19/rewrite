@@ -1,0 +1,21 @@
+# Nicegram
+# hostname = restore-access.indream.app
+Nicegram = type=http-response,pattern=^https?:\/\/restore-access\.indream\.app\/restoreAccess,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/Nicegram.js
+
+# 彩云天气
+# hostname = *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn
+彩云天气 = type=http-response,pattern=^https?:\/\/(biz|wrapper)\.cyapi\.cn\/(.+\/(user.+|visitors|activity)|p\/v\d\/vip_info),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/Caiyun.js
+
+# 网速管家
+# hostname = api*.speedtest.cn
+网速管家 = type=http-response,pattern=^https?:\/\/api.*\.speedtest\.cn\/user\/info,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/Wsgj.js
+
+# Spotify (不能超高音质)
+# hostname = spclient.wg.spotify.com
+Spotify-json = type=http-request,pattern=^https?:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/Spotify-json.js
+Spotify-proto = type=http-response,pattern=^https?:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/Spotify-proto.js,script-update-interval=0
+
+# AdGuard
+# hostname = mobile-api.adguard.org
+AdGuard = type=http-response,pattern=^https?:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt\/(.*?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/AdGuard.js
+
