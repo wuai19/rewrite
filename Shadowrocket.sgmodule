@@ -1,9 +1,6 @@
 #!url=https://github.com/wuai19/rewrite/blob/main/Shadowrocket.sgmodule
 #!name=自己合集
 
-[URL Rewrite]
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url reject-img
-
 [Script]
 # Nicegram
 # hostname = restore-access.indream.app
@@ -35,6 +32,9 @@ kw= type=http-response,pattern=^https?:\/\/.*\.(kuwo|lrts)\.(cn|me)\/(a\.p|music
 #YouTube
 youtube.request = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)\?,requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/youtube.request.beta.js
 youtube.response = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\?,requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/youtube.response.beta.js
+
+[URL Rewrite]
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url reject-img
 
 #*************************************#
 [MITM]
