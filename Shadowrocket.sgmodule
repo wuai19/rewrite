@@ -41,7 +41,7 @@ Block100SVIPCrack= type=http-response,pattern=^https?:\/\/tagit\.hyhuo\.com\/cyp
 ChatGPT= type=http-response,pattern=^https?:\/\/ios\.chat\.openai\.com\/backend-api\/(accounts\/check\/|models),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/ChatGPTPlusCrack.js
 #**************************************#
 #傲软抠图,傲软扫描,傲软PDF转换,傲软PDF编辑,傲软投屏,咖映,轻闪PDF,乃糖小组件,佐糖,佐糖照片修复
-jsxl= type=http-response,pattern=^https:\/\/awvp\.aoscdn\.com\/base\/vip\/client\/authorizations,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/jsxl.js
+jsxl= type=http-response,pattern=^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/jsxl.js
 #**************************************#
 
 [URL Rewrite]
