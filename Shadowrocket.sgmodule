@@ -48,4 +48,4 @@ ServerBee= type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(rece
 ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ url request-header (\r\n)X-RevenueCat-ETag:.+(\r\n) request-header $1X-RevenueCat-ETag:$2
 #*************************************#
 [MITM]
-hostname = %APPEND% restore-access.indream.app, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, spclient.wg.spotify.com, mobile-api.adguard.org, api.revenuecat.com, *.kuwo.cn, *.lrts.me, *.googlevideo.com, youtubei.googleapis.com, tagit.hyhuo.com, ios.chat.openai.com
+hostname = %APPEND% restore-access.indream.app, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, spclient.wg.spotify.com, mobile-api.adguard.org, api.revenuecat.com, *.kuwo.cn, *.lrts.me, *.googlevideo.com, youtubei.googleapis.com, tagit.hyhuo.com, ios.chat.openai.com, api.revenuecat.com
