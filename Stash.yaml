@@ -1,0 +1,110 @@
+proxy-providers:
+  服务提供商-1:
+    url: http://your-service-provider
+    interval: 600
+    # 服务提供商-2:
+    #   url: http://your-another-service-provider
+    #   interval: 600
+proxy-groups:
+  # 功能分组
+  - name: 手动选择
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Proxy.png
+    type: select
+    proxies: &proxies
+      - DIRECT
+    use: []
+  - name: Spotify
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Spotify.png
+    type: select
+    proxies:
+      - DIRECT
+      - 手动选择
+  - name: 苹果服务
+    proxies:
+      - DIRECT
+    type: select
+  - name: PayPal
+    proxies:
+      - 手动选择
+    type: select
+  - name: OpenAi
+    proxies:
+      - 手动选择
+    type: select
+  - name: TikTok
+    proxies:
+      - 手动选择
+    type: select
+  - name: 国内网站
+    type: select
+  - name: 国外网站
+    type: select
+    proxies:
+      - 手动选择
+  - name: 默认
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Final.png
+    type: select
+    proxies:
+      - 手动选择
+      - DIRECT
+rules:
+  - RULE-SET,Spotify,Spotify
+  - RULE-SET,OpenAi,OpenAi
+  - RULE-SET,TikTok,TikTok
+  - RULE-SET,PayPal,PayPal
+  - RULE-SET,苹果服务,苹果服务
+  - RULE-SET,国外网站,国外网站
+  - RULE-SET,国内网站,国内网站
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,默认
+script:
+  shortcuts:
+    quic: network == 'udp' and dst_port == 443
+dns:
+  default-nameserver:
+    - 114.114.115.115
+    - 119.28.28.28
+    - 223.6.6.6
+    - system
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+log-level: warning
+mode: rule
+rule-providers:
+  国内网站:
+    behavior: classical
+    format: yaml
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China_Classical.yaml
+  国外网站:
+    behavior: classical
+    format: yaml
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Classical.yaml
+  苹果服务:
+    behavior: classical
+    format: yaml
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical.yaml
+  PayPal:
+    behavior: classical
+    format: yaml
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PayPal/PayPal.yaml
+  Spotify:
+    behavior: classical
+    format: yaml
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml
+  TikTok:
+    behavior: classical
+    format: yaml
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml
+  OpenAi:
+    behavior: classical
+    format: yaml
+    interval: 86400
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml
