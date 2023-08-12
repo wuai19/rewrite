@@ -43,10 +43,12 @@ ChatGPT= type=http-response,pattern=^https?:\/\/ios\.chat\.openai\.com\/backend-
 #傲软抠图,傲软扫描,傲软PDF转换,傲软PDF编辑,傲软投屏,咖映,轻闪PDF,乃糖小组件,佐糖,佐糖照片修复
 jsxl= type=http-response,pattern=^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/jsxl.js
 #**************************************#
+#电视家
+dsj= type=http-response,pattern=^http[s]?:\/\/(share\.dianshihome\.com\/api\/user\/base\/info|123\.56\.125\.184\/api\/.+\/user\/info|api\.gaoqingdianshi\.com\/api\/ad\/mobile\/config),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/dsj.js
 
 [URL Rewrite]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url reject-img
 
 #*************************************#
 [MITM]
-hostname = %APPEND% restore-access.indream.app, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, spclient.wg.spotify.com, mobile-api.adguard.org, api.revenuecat.com, *.kuwo.cn, *.lrts.me, *.googlevideo.com, youtubei.googleapis.com, tagit.hyhuo.com, ios.chat.openai.com, *.aoscdn.com, *.apsapp.cn
+hostname = %APPEND% restore-access.indream.app, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, spclient.wg.spotify.com, mobile-api.adguard.org, api.revenuecat.com, *.kuwo.cn, *.lrts.me, *.googlevideo.com, youtubei.googleapis.com, tagit.hyhuo.com, ios.chat.openai.com, *.aoscdn.com, *.apsapp.cn, share.dianshihome.com, api.gaoqingdianshi.com
