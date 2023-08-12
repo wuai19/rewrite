@@ -26,7 +26,7 @@
 
 [rewrite_local]
 
-^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn) url script-response-body https://raw.githubusercontent.com/wuai19/rewrite/main/jsxl.js
+^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn) url script-response-body https://raw.githubusercontent.com/wuai19/rewrite/main/Jsxl.js
 
 [mitm] 
 
