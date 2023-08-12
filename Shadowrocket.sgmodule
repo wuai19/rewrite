@@ -48,6 +48,7 @@ dsj= type=http-response,pattern=^http[s]?:\/\/(share\.dianshihome\.com\/api\/use
 #**************************************#
 #notability
 notability= type=http-response,pattern=^https?:\/\/notability\.com\/(global|subscriptions),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/notability.js
+#**************************************#
 #goodnotes6
 Goodnotes6= type=http-response,pattern=^https:\/\/isi\.csan\.goodnotes\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/notability.js
 
