@@ -37,9 +37,13 @@ kw= type=http-response,pattern=^https?:\/\/.*\.(kuwo|lrts)\.(cn|me)\/(a\.p|music
 #拦截100
 Block100SVIPCrack= type=http-response,pattern=^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/Block100SVIPCrack.js
 #**************************************#
+#ChatGPT-Plus
+ChatGPT= type=http-response,pattern=^https?:\/\/ios\.chat\.openai\.com\/backend-api\/(accounts\/check\/|models),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/ChatGPTPlusCrack.js
+#**************************************#
+
 [URL Rewrite]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url reject-img
 
 #*************************************#
 [MITM]
-hostname = %APPEND% restore-access.indream.app, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, spclient.wg.spotify.com, mobile-api.adguard.org, api.revenuecat.com, *.kuwo.cn, *.lrts.me, *.googlevideo.com, youtubei.googleapis.com, tagit.hyhuo.com
+hostname = %APPEND% restore-access.indream.app, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, spclient.wg.spotify.com, mobile-api.adguard.org, api.revenuecat.com, *.kuwo.cn, *.lrts.me, *.googlevideo.com, youtubei.googleapis.com, tagit.hyhuo.com, ios.chat.openai.com
