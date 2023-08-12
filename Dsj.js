@@ -8,7 +8,7 @@
 **************************************
 
 [rewrite_local]
-^http[s]?:\/\/(share\.dianshihome\.com\/api\/user\/base\/info|123\.56\.125\.184\/api\/.+\/user\/info|api\.gaoqingdianshi\.com\/api\/ad\/mobile\/config) url script-response-body https://raw.githubusercontent.com/wuai19/rewrite/main/dsj.js
+^http[s]?:\/\/(share\.dianshihome\.com\/api\/user\/base\/info|123\.56\.125\.184\/api\/.+\/user\/info|api\.gaoqingdianshi\.com\/api\/ad\/mobile\/config) url script-response-body https://raw.githubusercontent.com/wuai19/rewrite/main/Dsj.js
 
 [mitm]
 hostname = share.dianshihome.com, api.gaoqingdianshi.com
