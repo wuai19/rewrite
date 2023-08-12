@@ -33,6 +33,8 @@ ChatAi= type=http-response,pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipt
 #酷我音乐
 kw= type=http-response,pattern=^https?:\/\/.*\.(kuwo|lrts)\.(cn|me)\/(a\.p|music\.pay|(vip\/(v2|enc)\/(theme|user\/vip))|(EcomResource|(Mobile)?Ad)Serv(er|ice)).*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/Kw.js
 
+#拦截100
+Block100SVIPCrack= type=http-response,pattern=^https?:\/\/tagit\.hyhuo\.com\/cypt\/block100\/get_vip_info$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/Block100SVIPCrack.js
 [URL Rewrite]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url reject-img
 
