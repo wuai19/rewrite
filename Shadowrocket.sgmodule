@@ -40,4 +40,4 @@ Block100SVIPCrack= type=http-response,pattern=^https?:\/\/tagit\.hyhuo\.com\/cyp
 
 #*************************************#
 [MITM]
-hostname = %APPEND% restore-access.indream.app, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, spclient.wg.spotify.com, mobile-api.adguard.org, api.revenuecat.com, *.kuwo.cn, *.lrts.me, *.googlevideo.com, youtubei.googleapis.com
+hostname = %APPEND% restore-access.indream.app, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, spclient.wg.spotify.com, mobile-api.adguard.org, api.revenuecat.com, *.kuwo.cn, *.lrts.me, *.googlevideo.com, youtubei.googleapis.com, tagit.hyhuo.com
