@@ -1,6 +1,8 @@
 #!url=https://github.com/wuai19/rewrite/blob/main/Shadowrocket.sgmodule
 #!name=模块合集
 #**************************************#
+[General]
+skip-proxy = %APPEND% iosapps.itunes.apple.com
 
 [Script]
 # Nicegram
@@ -55,11 +57,14 @@ Goodnotes6= type=http-response,pattern=^https:\/\/isi\.csan\.goodnotes\.com\/.+\
 #Alidrive
 alidrive= type=http-response,pattern=^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/wuai19/rewrite/main/Alidrive.js
 #**************************************#
-
+#!name=TestFlight账户管理
+#!desc=自动存储/合并多个TestFlight账户列表, 并可导出/分享TestFlight App。
+#!system=ios
+TestFlight账户管理 = type=http-request,pattern=^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/,requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js
 
 [URL Rewrite]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url reject-img
 
 #*************************************#
 [MITM]
-hostname = %APPEND% restore-access.indream.app, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, spclient.wg.spotify.com, mobile-api.adguard.org, api.revenuecat.com, *.kuwo.cn, *.lrts.me, *.googlevideo.com, youtubei.googleapis.com, tagit.hyhuo.com, ios.chat.openai.com, *.aoscdn.com, *.apsapp.cn, share.dianshihome.com, api.gaoqingdianshi.com, notability.com, isi.csan.goodnotes.com, *.aliyundrive.com, *.alipan.com
+hostname = %APPEND% restore-access.indream.app, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, spclient.wg.spotify.com, mobile-api.adguard.org, api.revenuecat.com, *.kuwo.cn, *.lrts.me, *.googlevideo.com, youtubei.googleapis.com, tagit.hyhuo.com, ios.chat.openai.com, *.aoscdn.com, *.apsapp.cn, share.dianshihome.com, api.gaoqingdianshi.com, notability.com, isi.csan.goodnotes.com, *.aliyundrive.com, *.alipan.com, testflight.apple.com
