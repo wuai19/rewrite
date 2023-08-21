@@ -69,4 +69,4 @@ Renrenshipin= type=http-response,pattern=^https?:\/\/api\.hujuvod\.com\/(user\/p
 
 #*************************************#
 [MITM]
-hostname = %APPEND% restore-access.indream.app, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, spclient.wg.spotify.com, mobile-api.adguard.org, api.revenuecat.com, *.kuwo.cn, *.lrts.me, *.googlevideo.com, youtubei.googleapis.com, tagit.hyhuo.com, ios.chat.openai.com, *.aoscdn.com, *.apsapp.cn, share.dianshihome.com, api.gaoqingdianshi.com, notability.com, isi.csan.goodnotes.com, *.aliyundrive.com, *.alipan.com, testflight.apple.com
+hostname = %APPEND% restore-access.indream.app, *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, spclient.wg.spotify.com, mobile-api.adguard.org, api.revenuecat.com, *.kuwo.cn, *.lrts.me, *.googlevideo.com, youtubei.googleapis.com, tagit.hyhuo.com, ios.chat.openai.com, *.aoscdn.com, *.apsapp.cn, share.dianshihome.com, api.gaoqingdianshi.com, notability.com, isi.csan.goodnotes.com, *.aliyundrive.com, *.alipan.com, testflight.apple.com, api.hujuvod.com
