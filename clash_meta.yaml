@@ -1,0 +1,122 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: :9090
+dns:
+  enabled: true
+  nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  fallback:
+    - 8.8.8.8
+    - 8.8.4.4
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
+       
+store-selected: true
+
+proxies:
+#自建节点
+
+
+#远程代理集
+p: &p
+  type: http
+  interval: 1800
+  health-check:
+    enable: true
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+
+#远程规则集
+c: &c
+  type: http
+  behavior: classical
+  interval: 86400
+
+proxy-providers:
+
+  机场1: 
+    <<: *p
+    url: '在这里填写机场订阅链接'
+    path: "./proxy_providers/机场1.yaml"
+    #path一般不需要改，反正又看不到
+    
+    #如果觉得不好看，也可以把下面的多余的删掉，use的锚点里面的提供商删掉就
+
+proxy-groups:
+
+  - name: 🚀手动选择
+    type: select
+    proxies:
+    include-all: true
+
+  - name: 🧿Spotify
+    type: select
+    proxies:
+      - 🚀手动选择
+      - DIRECT
+
+  - name: 📘Facebook
+    type: select
+    proxies:
+      - 🚀手动选择
+
+  - name: 🌀OpenAI
+    type: select
+    proxies:
+      - 🚀手动选择
+
+  - name: 🇨🇳国内
+    type: select
+    proxies:
+      - DIRECT
+
+  - name: 🌍国外
+    type: select
+    proxies:
+      - 🚀手动选择
+
+  - name: 🐟漏网之鱼
+    type: select
+    proxies:
+      - 🚀手动选择
+    
+rule-providers:
+
+  Spotify:
+    <<: *c
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml'
+    path: './Spotify.yaml'
+
+  Facebook:
+    <<: *c
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml'
+    path: './Facebook.yaml'
+
+  OpenAI:
+    <<: *c
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml'
+    path: './OpenAI.yaml'
+
+  China:
+    <<: *c
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China_Classical.yaml'
+    path: './China.yaml'
+
+  Gobal:
+    <<: *c
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/Global/Global_Classical.yaml'
+    path: './Global.yaml'
+
+rules:
+
+  - RULE-SET,Spotify,🧿Spotify
+  - RULE-SET,Facebook,📘Facebook
+  - RULE-SET,OpenAI,🌀OpenAI
+  - RULE-SET,China,🇨🇳国内
+  - RULE-SET,Gobal,🌍国外
+  - GEOIP,CN,🇨🇳国内
+  - MATCH,🐟漏网之鱼
