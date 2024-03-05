@@ -6,7 +6,7 @@ log-level: info
 external-controller: :9090
 ipv6: true
 unified-delay: true
-########################
+🌹########################分界线🌹
 dns:
   enabled: true
   nameserver:
@@ -28,7 +28,7 @@ dns:
     - tls://dns.google:853
       
 store-selected: true
-##########################
+🌹##########################分界线🌹
 proxies:
 #自建节点
 
@@ -60,7 +60,7 @@ proxy-providers:
     <<: *p
     url: '机场订阅链接'
     path: "./proxy_providers/机场2.yaml"
-####################################
+🌹####################################分界线🌹
 proxy-groups:
 
   - name: 🚀手动选择
@@ -84,7 +84,7 @@ proxy-groups:
   - name: 📘Facebook
     type: select
     proxies:
-      - EU1-LON-kvm
+      - 🚀手动选择
 
   - name: 🌀OpenAI
     type: select
@@ -107,7 +107,7 @@ proxy-groups:
     proxies:
       - 🚀手动选择
       - ♻自动选择
-#########################
+🌹#########################分界线🌹
 rule-providers:
 
   Spotify:
@@ -134,7 +134,7 @@ rule-providers:
     <<: *c
     url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Clash/Global/Global_Classical.yaml'
     path: './Global.yaml'
-#########################
+🌹#########################分界线🌹
 rules:
 
   - RULE-SET,Spotify,🧿Spotify
